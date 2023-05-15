@@ -92,6 +92,8 @@ export class UploadCsvComponent {
 
   removeFile() {
     this.files = [];
+    this.errmsg = "Removed Selected File"
+    this.showSuccess(this.errmsg);
   }
 
   uploadData(data: any) {
