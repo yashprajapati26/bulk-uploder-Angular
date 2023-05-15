@@ -21,7 +21,7 @@ export class UploadCsvComponent {
   arr: any[] = []
   jsonData: any;
   obj: any = {};
-  show : boolean = true;
+  show: boolean = true;
 
   constructor(private uploadcsvservice: UploadCsvService,
     private ngxLoader: NgxUiLoaderService,
@@ -31,7 +31,7 @@ export class UploadCsvComponent {
 
   csvJSON(csvText: any) {
     let lines = csvText.split("\n");
-    let result = []; 
+    let result = [];
     let headers = lines[0].split(",");
 
     const equalValues = (this.headers.length === headers.length) && this.headers.every((value, index) => value === headers[index]);
@@ -90,7 +90,9 @@ export class UploadCsvComponent {
 
 
 
-
+  removeFile() {
+    this.files = [];
+  }
 
   uploadData(data: any) {
     if (this.files.length > 0) {
