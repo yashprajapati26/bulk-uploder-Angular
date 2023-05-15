@@ -1,7 +1,7 @@
 
 
 <div [hidden]="!show" class="h-screen w-screen bg-gray-200 justify-center">
-  <div class="px-10 mx-28 pt-10 -mb-10 text-black hover:text-blue-500 cursor-pointer flex place-items-center"
+  <div class="px-5 md:px-10 md:mx-28 pt-10 -mb-10 text-black hover:text-blue-500 cursor-pointer flex place-items-center"
     routerLink="">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
       class="w-6 h-6">
@@ -10,8 +10,8 @@
     <a routerLink="/" class="text-white bg-blue-700 font-medium rounded-full text-sm px-4 py-2 mr-2 hover:shadow-sm hover:shadow-black">Go Back</a>
     <!-- <h3 class="text-white bg-red-700 font-medium rounded-full text-lg px-4 py-2 mr-2 ml-96">BulkUploder</h3> -->
   </div>
-  <div class="px-10 my-28 mx-36 w-4/5 flex border border-gray-300 shadow-lg shadow-black bg-white rounded-xl">
-    <div class="w-1/2 p-2">
+  <div class="m-2 md:px-10 my-16 md:my-28 md:mx-36 md:w-4/5 flex-col md:flex border border-gray-300 shadow-lg shadow-black bg-white rounded-xl">
+    <div class="md:w-1/2 p-2">
       <p class="text-xl px-5 py-1 font-medium tracking-tight">Bluk Create Data</p>
       <p class="text-sm px-5">Upload your data...</p>
       <!-- drop box  -->
@@ -48,7 +48,7 @@
         <a href="../../../assets/template.csv" class="text-blue-600 underline m-1">Download the template</a>
       </div>
     </div>
-    <div class="w-1/2 p-4 py-16 border border-l-gray-600 border-r-0">
+    <div class="md:w-1/2 p-4 py-16 md:border md:border-l-gray-600 border-r-0" id="selectedFiles">
       <p *ngIf="files" class="text-xl px-5 py-1 font-medium tracking-tight">Upload File :</p>
       <div *ngIf="files" class="p-1 m-4">
         <div class="flex flex-cols">

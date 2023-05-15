@@ -137,6 +137,8 @@ export class UploadCsvComponent {
     } else {
       this.errmsg = undefined
       this.files = <Array<File>>event.target.files;
+      const element = document.getElementById("selectedFiles");
+      element?.scrollIntoView();
     }
     setTimeout(() => {
       this.msg = undefined;
